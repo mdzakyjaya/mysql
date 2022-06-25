@@ -1,0 +1,13 @@
+-- i'm interested in finding out the average salary of each title grouped by gender.
+-- i have tried several combinations of query but i still did't get the answer.
+
+-- this interest arises when i use this code:
+
+SELECT 
+    t.title, e.gender, count(t.emp_no)
+FROM
+    titles t
+        JOIN
+    employees e ON e.emp_no = t.emp_no
+GROUP BY t.title, e.gender
+ORDER BY t.title;
